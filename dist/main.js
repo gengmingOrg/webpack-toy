@@ -1,1 +1,1 @@
-document.body.appendChild(function(){let e=document.createElement("div");return e.innerHTML="1111",e}());
+document.body.appendChild(function(){let e=document.createElement("div");return e.innerHTML="1111",e.classList.add("hello"),e}());
