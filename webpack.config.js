@@ -1,13 +1,13 @@
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   mode: 'development',
   devtool: 'inline-source-map',
   entry: {
-    app: './src/index.js',
-    print: './src/print.js'
+    app: './src/index.js'
   },
   output: {
     filename: '[name].bundle.js',
@@ -16,10 +16,12 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: '管理输出1'
-    })
+      title: '管理输出'
+    }),
+    new webpack.HotModuleReplacementPlugin()
   ],
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    hot: true
   },
 };
