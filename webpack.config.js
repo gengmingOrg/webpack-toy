@@ -3,6 +3,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
+  devtool: 'inline-source-map',
   entry: {
     app: './src/index.js',
     print: './src/print.js'
@@ -17,4 +19,7 @@ module.exports = {
       title: '管理输出1'
     })
   ],
+  devServer: {
+    contentBase: './dist'
+  },
 };
