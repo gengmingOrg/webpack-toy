@@ -24,4 +24,7 @@ module.exports = {
     contentBase: './dist',
     hot: true
   },
+  optimization: {
+    usedExports: true
+  }
 };
